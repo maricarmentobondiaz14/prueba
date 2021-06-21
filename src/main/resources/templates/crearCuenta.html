@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/3.2.0/css/bootstrap.min.css} "/>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link  th:href="@{/css/estilos.css}" rel="stylesheet">
+    <title>Inicio</title>
+</head>
+<body>
+<div class="container" id="formulario">
+        <form th:action="@{/save}" th:object="${usuario}" method="POST">
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <div><h4 style="font-weight:bold;">Crear cuenta</h4></div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <input type="hidden" th:field="*{id}" readonly="readonly" />
+                    <div class="letrero"><label>Correo electrónico</label></div>
+                    <div class="input-container">
+                        <input type="text" class="input-form" name="correo" th:field="*{email}" id="correo" placeholder="Ingrese su correo electrónico" required>
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <div class="letrero"><label >Contraseña</label></div>
+                    <div class="input-container">
+                        <input type="password" class="input-form" name="password" th:field="*{password}" id="password" placeholder="Ingrese su Contraseña" required>
+                    </div>
+                </div>
+                <div class="form-group col-md-6">
+                    <div class="letrero"><label >Confirmar contraseña</label></div>
+                    <div class="input-container">
+                        <input type="password" class="input-form" name="password" id="password" placeholder="Reconfirma tu Contraseña" required>
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <div class="letrero"><label>Nombre completo</label></div>
+                    <div class="input-container">
+                        <input type="text" class="input-form" name="nombre" id="nombre" th:field="*{nombre}" placeholder="Ingrese su nombre completo" required>
+                    </div>
+                </div>
+            </div>
+          
+
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                        <button type="submit" class="input-boton">Registrarme</button>
+                </div>
+            </div>
+         
+        </form>
+    </div>
+</body>
+</html>

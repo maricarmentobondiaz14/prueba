@@ -1,0 +1,186 @@
+body {
+    background-color: #50a3a2;
+    
+}
+#body2{
+    background-color: white;
+
+
+}
+h4{
+    margin-bottom: 0px;
+}
+#formulario{
+    width: 40%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    margin-top: 140px;
+    margin-bottom: 50px;
+    box-shadow:0px 4px 3px rgba(0,0,0,0.5);
+
+}
+#listado{
+    padding-left: 15px;
+    padding-right: 15px;
+
+
+}
+.contenedor{
+    width:100%;
+    margin:auto;
+    border: 1px solid #ccc;
+    height: 600px;
+
+  }
+  .contenedor-chico{
+      width: 47%;
+      height: 160px;
+      border: 1px solid #ccc;
+      background-color: white;
+      box-shadow:0px 4px 3px rgba(199, 199, 199, 0.5);
+      border-radius: 2px;
+      padding:15px;
+      margin: 10px;
+
+  }
+  .letrero-conte{
+    border-bottom:1px solid #0070fd;
+  }
+  .letrero-conte label{
+      color: rgba(145, 128, 128, 0.664);
+  }
+  .contenedor-largo{
+    width: 20%;
+    height: 500px;
+    border: 1px solid #ccc;
+    background-color: white;
+    box-shadow:0px 4px 3px rgba(199, 199, 199, 0.5);
+    border-radius: 2px;
+    padding:15px;
+    margin: 10px;
+
+  }
+  .content-list{
+      width:96%;
+      min-height: 500px;
+      border: 1px solid #ccc;
+      margin-left: 30px;
+      margin-right: 30px;
+      margin-top:20px;
+
+  }
+  .content-list-letrero{
+    border-bottom:1px solid #0070fd;
+
+  }
+  .content-list-letrero label{
+      padding-top: 5px;
+      padding-bottom:5px ;
+  }
+  .fil1{
+      width:75%;
+  }
+  .lista{
+      margin: 5px;
+      
+  }
+  .lista a{
+      text-decoration: none;
+      font-weight: bold;
+      color:black;
+  }
+  .lista img{
+      width: 30px;
+      height: 20px;
+      margin: 5px;
+  }
+  #pais2 img{
+      margin-left:240px;
+      margin-top: -45px;
+      width:160px; 
+      height:70px;
+  }
+  #pais2 p{
+    margin-top:20px;
+    font-weight: bold;
+    margin-left: 30px;
+    font-size: 25px;
+
+}
+#clima2 img{
+	margin-top:15px;
+	width:120px; 
+    height:70px;
+}
+#clima2 p{
+	    font-size: 10px;
+	    line-height: 0.4pc; 
+	    font-weight: bold;
+	
+}
+#clima2 .temperatura{
+	margin-top:15px;
+	font-size: 15px;
+}
+#zonas2{
+    margin:10px;
+}
+#zonas2 p{
+    line-height: 0.5pc; 
+
+}
+#zonas2 a{
+    color:black;
+    font-weight: bold;
+    text-decoration: none;
+
+}
+header nav{
+    background:#0070fd;
+    margin-bottom:10px;
+ }
+ header nav ul{
+    list-style:none;
+    overflow:hidden;
+ }
+ header nav ul li{
+    float:left;
+ }
+ header nav ul li a{
+     display:block;
+     padding:15px;
+     color:#fff;
+     text-decoration:none;
+ }
+ header nav ul li a:hover{
+  background-color: #2980b9;
+  text-decoration:none;
+ 
+ }
+.input-form {
+    width: 100%;
+    padding: 6px 10px;
+    margin: 8px 0;
+    display: inline-block;
+    border-bottom:2px solid #0070fd;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    box-sizing: border-box;
+   }
+.letrero label{
+    margin-bottom: 0px;
+    font-size: 13px;
+}
+.input-boton {
+    width: 100%;
+    background-color: #0070fd;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+  }
+  .input-boton:hover {
+    background-color: #2679AB;
+  }

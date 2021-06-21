@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/3.2.0/css/bootstrap.min.css} "/>
+
+    <link  th:href="@{/css/estilos.css}" rel="stylesheet">
+       <script type="text/javascript" th:src="@{/js/cambiarPais.js}"></script>
+       <script type="text/javascript" th:src="@{/js/zonahoraria.js}"></script>
+
+    <title>Inicio</title>
+</head>
+<body id="body2">
+    <div  id="listado">
+        <div class="contenedor">
+            <header>
+                    <div class="menu">
+                        <nav>
+                            <ul>
+                                <li><a th:href="@{/tablero}">Dashboard</a></li>
+                                <li><a th:href="@{/listadousuarios}">Usuarios</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    
+                
+            </header>
+                <div class="form-group col-md-12">
+                    <div class="form-row">
+                            <div class="form-group col-md-10 fil1">
+                                <div class="form-group col-md-5 contenedor-chico">
+                                    <div class="letrero-conte">
+                                        <label>Clima</label>    
+                                    </div>
+                                    <div id="clima">
+                                        </div>
+                                    
+                                </div>
+                                <div class="form-group col-md-5 contenedor-chico">
+                                    <div class="letrero-conte">
+                                        <label>País seleccionado</label>
+                                    </div>
+                                    <div id="paises">
+
+                                    </diV>
+                                </div>
+                                <div class="form-group col-md-5 contenedor-chico">
+                                    <div class="letrero-conte">
+                                        <label>Tareas Pendientes</label>
+                                    </div>
+                                    <div class="col-md-10">
+					                        <table id="tablatareas" class="table table-responsive table-striped table-hover">
+					                            
+					                            <tbody>
+					                                <tr th:each="t:${tareas}">
+					                                    <td th:if="${t.estado == 0}" th:text=${t.descripcion}></td>
+					                                </tr>
+					                            </tbody>
+					                    
+					                        </table>
+					               </div>
+                                </div>
+                                <div class="form-group col-md-5 contenedor-chico">
+                                    <div class="letrero-conte">
+                                        <label>Hora</label>
+                                    </div>
+                                    
+                                </div>
+                                <div class="form-group col-md-5 contenedor-chico">
+                                    <div class="letrero-conte">
+                                        <label>Tareas completadas</label>
+                                    </div>
+                                    <div class="col-md-10">
+					                        <table id="tablatareas" class="table table-responsive table-striped table-hover">
+					                            
+					                            <tbody>
+					                                <tr th:each="t:${tareas}">
+					                                     <td th:if="${t.estado == 1}" th:text=${t.descripcion}></td>
+					                                </tr>
+					                            </tbody>
+					                    
+					                        </table>
+					                    </div>
+                                    
+                                </div>
+                                <div class="form-group col-md-5 contenedor-chico">
+                                    <div class="letrero-conte">
+                                        <label>Zonas horarias disponibles</label>
+                                    </div>
+                                    <div id="zonas">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group col-md-2 contenedor-largo">
+                                <div class="letrero-conte">
+                                    <label>Países disponibles</label>
+                                </div>
+                                <div class="lista">
+                                    <p><a th:onclick="cambiarPais('México')"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Flag_of_Mexico.svg/1200px-Flag_of_Mexico.svg.png"/>México</a></p>
+                                    <p><a th:onclick="cambiarPais('Estados Unidos')"><img src="https://images-na.ssl-images-amazon.com/images/I/61SiPzQldpL._AC_SX425_.jpg"/>Estados Unidos</a></p>
+                                    <p><a th:onclick="cambiarPais('Ecuador')"><img src="https://hemptoday.net/es/wp-content/uploads/2020/07/flag-of-ecuador-710x437-1.jpg"/>Ecuador</a></p>
+                                </div>
+                            </div>
+                    </div>
+                    
+                </div>
+        </div>
+    </div>
+
+            
+</body>
+</html>

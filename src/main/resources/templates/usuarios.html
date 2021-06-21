@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/3.2.0/css/bootstrap.min.css}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link  th:href="@{/css/estilos.css}" rel="stylesheet">
+    <title>Inicio</title>
+</head>
+<body id="body2">
+    <div  id="listado">
+        <div class="contenedor">
+            <header>
+                    <div class="menu">
+                        <nav>
+                            <ul>
+                                <li><a th:href="@{/tablero}">Dashboard</a></li>
+                                <li><a th:href="@{/listadousuarios}">Usuarios</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    
+                
+            </header>
+                <div class="form-group col-md-12 content-list">
+                    <div class="content-list-letrero">
+                        <label>Lista de usuarios del sistema</label>
+                    </div>
+                    <div class="col-md-12">
+                        <table id="tablausuarios" class="table table-responsive table-striped table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Nombre</th>
+                                    <th>Correo electrónico</th>
+                                    <th>Fecha de registro</th>
+                                    <th>Último Login</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr th:each="u:${usuarios}">
+                                    <td th:text="${u.nombre}"></td>
+                                    <td th:text="${u.email}"></td>
+                                    <td th:text="${u.fechaRegistro}"></td>
+                                    <td th:text="${u.ultimoLogin}"></td>
+                                </tr>
+                            </tbody>
+                    
+                        </table>
+                    </div>
+                    
+                   
+                    
+                </div>
+        </div>
+    </div>
+            
+</body>
+</html>
