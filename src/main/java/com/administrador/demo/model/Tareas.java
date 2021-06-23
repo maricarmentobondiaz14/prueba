@@ -9,14 +9,14 @@ public class Tareas {
 	@Id 
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
-	private int id_usuario;
+	private long id_usuario;
 	private int estado;
 	private String descripcion;
 	
 	public Tareas() {
 		
 	}
-	public Tareas(int id,int id_usuario, int estado ,String descripcion) {
+	public Tareas(int id,long id_usuario, int estado ,String descripcion) {
 		super();
 		this.id=id;
 		this.id_usuario=id_usuario;
@@ -29,10 +29,10 @@ public class Tareas {
 	public void setId(int id) {
 		this.id = id;
 	}
-	public int getId_usuario() {
+	public long getId_usuario() {
 		return id_usuario;
 	}
-	public void setId_usuario(int id_usuario) {
+	public void setId_usuario(long id_usuario) {
 		this.id_usuario = id_usuario;
 	}
 	public int getEstado() {
