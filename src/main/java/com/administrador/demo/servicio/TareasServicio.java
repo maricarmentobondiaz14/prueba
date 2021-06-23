@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import com.administrador.demo.dao.TareasDAO;
 import com.administrador.demo.model.Tareas;
+import com.administrador.demo.model.Usuario;
 import com.administrador.demo.servicioInterface.TareasInterface;
 @Service
 public class TareasServicio implements TareasInterface {

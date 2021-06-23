@@ -7,7 +7,7 @@
     <title>Inicio</title>
 </head>
 <div class="container" id="login">
-        <form th:action="@{/tablero}" method="get">
+        <form th:action="@{/login}" method="POST">
             <div class="form-row">
                 <div class="form-group col-md-12">
                     <div><h4 style="font-weight:bold;">Bienvenido</h4></div>
@@ -18,7 +18,7 @@
                     <div class="letrero"><label>Correo electrónico</label></div>
                     <div class="input-container">
                         <i class="glyphicon glyphicon-comment"></i>
-                        <input type="text" class="input-form" name="usuario" id="usuario" placeholder="Ingrese su correo electrónico" required>
+                        <input type="text" class="input-form" name="email" id="usuario" placeholder="Ingrese su correo electrónico" required>
                     </div>
                 </div>
             </div>

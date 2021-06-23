@@ -21,10 +21,18 @@ public class UsuarioSevicio implements UsuarioInterface {
 	}
 
 	@Override
-	public Optional<Usuario> listarId(int id) {
+	public Optional<Usuario> listarId(Long id) {
 		// TODO Auto-generated method stub
 		return usuarioDAO.findById(id);
 	}
+	@Override
+	public Optional<Usuario> BuscarEmail(String email){
+        return  usuarioDAO.BuscarEmail(email);
+
+	}
+	
+	
+	
 
 	@Override
 	public int save(Usuario u) {
@@ -40,9 +48,10 @@ public class UsuarioSevicio implements UsuarioInterface {
 	}
 
 	@Override
-	public void delete(int id) {
+	public void delete(Long id) {
 		// TODO Auto-generated method stub
 		usuarioDAO.deleteById(id);
 	}
+	
 
 }

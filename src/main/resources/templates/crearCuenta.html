@@ -7,6 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link  th:href="@{/css/estilos.css}" rel="stylesheet">
+    <script type="text/javascript" th:src="@{/js/verificarpassword.js}"></script>
+
     <title>Inicio</title>
 </head>
 <body>
@@ -36,7 +38,7 @@
                 <div class="form-group col-md-6">
                     <div class="letrero"><label >Confirmar contraseña</label></div>
                     <div class="input-container">
-                        <input type="password" class="input-form" name="password" id="password" placeholder="Reconfirma tu Contraseña" required>
+                        <input type="password" class="input-form" name="confirmacion" id="confirmacion" placeholder="Reconfirma tu Contraseña" required>
                     </div>
                 </div>
             </div>
@@ -52,7 +54,7 @@
 
             <div class="form-row">
                 <div class="form-group col-md-12">
-                        <button type="submit" class="input-boton">Registrarme</button>
+                        <button type="submit" class="input-boton" th:onclick ="validarpassword()">Registrarme</button>
                 </div>
             </div>
          

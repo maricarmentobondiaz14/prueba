@@ -1,20 +1,29 @@
 package com.administrador.demo.model;
 
+import java.util.List;
+import java.util.Set;
+
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+import javax.persistence.JoinColumn;
+
 
 @Entity
 public class Usuario {
 	@Id 
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id;
+	private Long id;
 	private String nombre;
 	private String password;
 	private String email;
 	private String fechaRegistro;
 	private String ultimoLogin;
+
 	public Usuario() {
 		
 	}
@@ -27,10 +36,11 @@ public class Usuario {
 		this.ultimoLogin=ultimoLogin;
 	}
 	
-	public int getId() {
+
+	public Long getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 	public String getNombre() {
@@ -63,7 +73,6 @@ public class Usuario {
 	public void setUltimoLogin(String ultimoLogin) {
 		this.ultimoLogin = ultimoLogin;
 	}
-	
-	
-
 }
+	
+	

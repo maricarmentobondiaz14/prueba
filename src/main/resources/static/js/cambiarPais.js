@@ -1,7 +1,11 @@
 function cambiarPais(pais){
     if (pais=="México"){
+		
+		
+		var zonah='America/Mexico_City';
         paises.innerHTML = "<div id='pais2'><p>" +pais +"</p>"
         +"<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Flag_of_Mexico.svg/1200px-Flag_of_Mexico.svg.png'></div>";
+        darHora(zonah);
         consultarAPI("Ciudad de México",pais);
         zonas.innerHTML="<div id='zonas2'>"+
             '<p><a onclick="javascript:zonahoraria(1,1)">Ciudad de México Central</a></p>'+
@@ -9,8 +13,10 @@ function cambiarPais(pais){
             "<p><a onclick='javascript:zonahoraria(1,3)'>Monterrey</a></p></div";
 
     }else if(pais=="Estados Unidos"){
+		var zonah='America/Chicago';
         paises.innerHTML = "<div id='pais2'><p>" +pais +"</p>"
         +"<img src='https://images-na.ssl-images-amazon.com/images/I/61SiPzQldpL._AC_SX425_.jpg'></div>";
+        darHora(zonah);
         consultarAPI("Chicago",pais);
         zonas.innerHTML="<div id='zonas2'>"+
             "<p><a onclick='javascript:zonahoraria(2,1)'>Chicago</a></p>"+
@@ -21,6 +27,8 @@ function cambiarPais(pais){
             "<p><a onclick='javascript:zonahoraria(2,6)'>Honolulu</a></p></div>";
     }else if(pais=="Ecuador"){
 	        const ciudad="Puerto Ayora";
+	        var zonah='America/Guayaquil';
+	        darHora(zonah);
 			consultarAPI(ciudad,pais);
 			
         paises.innerHTML = "<div id='pais2'><p>" +pais +"</p>"+
@@ -62,6 +70,7 @@ const consultarAPI=async(ciudad,pais)=>{
 				`;
 				
 			}
+
 
 
 
